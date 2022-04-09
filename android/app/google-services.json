@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "83828570796",
+    "project_id": "messengerclone-44fd4",
+    "storage_bucket": "messengerclone-44fd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83828570796:android:778de1d8d671bbb06c7d09",
+        "android_client_info": {
+          "package_name": "com.example.messenger_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83828570796-0i1cd9ak56sknqnt6ptqrqg65afrjioi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCVzInaL_wUufSKQ7W1CKv_jjSN99qTI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83828570796-0i1cd9ak56sknqnt6ptqrqg65afrjioi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
