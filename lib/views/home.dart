@@ -5,6 +5,7 @@ import 'package:messenger_clone/services/auth.dart';
 import 'package:messenger_clone/services/database.dart';
 import 'package:messenger_clone/views/chatscreen.dart';
 import 'package:messenger_clone/views/signin.dart';
+import 'package:messenger_clone/views/storage.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -155,13 +156,39 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      body: Container(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              title: const Text('Storage'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Storage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Item 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+      body: new Container(
         margin: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
             Row(
               children: [
-                  isSearching
+                isSearching
                     ? GestureDetector(
                         onTap: () {
                           isSearching = false;

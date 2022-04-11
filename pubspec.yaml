@@ -18,6 +18,9 @@ dependencies:
   random_string:
   cloud_firestore:
   ffi: ^1.1.2
+  file_picker:
+  http:
+  firebase_storage:     #4.0.0 earlier
 
   cupertino_icons: ^1.0.0
 

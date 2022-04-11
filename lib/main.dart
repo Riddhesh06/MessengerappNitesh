@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           if (snapshot.hasData) {
             return Home();
           } else {
-            return SignIn();
+            return SignIn(); //SignIn()     //Home() to check internal fn
           }
         },
       ),
