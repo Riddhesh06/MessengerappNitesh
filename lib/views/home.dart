@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Messenger Clone"),
+        title: Text("Messenger"),
         actions: [
           InkWell(
             onTap: () {
@@ -251,8 +251,11 @@ class _ChatRoomListTileState extends State<ChatRoomListTile> {
   String profilePicUrl = "", name = "", username = "";
 
   getThisUserInfo() async {
-    username =
-        this.widget.chatRoomId.replaceAll(widget.myUsername, "").replaceAll("_", "");
+    username = this
+        .widget
+        .chatRoomId
+        .replaceAll(widget.myUsername, "")
+        .replaceAll("_", "");
     QuerySnapshot querySnapshot = await DatabaseMethods().getUserInfo(username);
     print(
         "something bla bla ${querySnapshot.docs[0].id} ${querySnapshot.docs[0]["name"]}  ${querySnapshot.docs[0]["imgUrl"]}");
