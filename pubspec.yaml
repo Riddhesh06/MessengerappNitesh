@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   firebase_auth:
-  firebase_core:
+  firebase_core: 
   google_sign_in:
   shared_preferences:
   random_string:
@@ -20,7 +20,7 @@ dependencies:
   ffi: ^1.1.2
   file_picker:
   http:
-  firebase_storage:     #4.0.0 earlier
+  firebase_storage: 8.0.0   #4.0.0 earlier  10.2.10
 
   cupertino_icons: ^1.0.0
 

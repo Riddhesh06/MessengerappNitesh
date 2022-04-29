@@ -12,7 +12,7 @@ class AuthMethods {
   final FirebaseAuth auth = FirebaseAuth.instance;
 
   getCurrentUser() async {
-    return await auth.currentUser;
+    return auth.currentUser; // await removed
   }
 
   signInWithGoogle(BuildContext context) async {
@@ -24,7 +24,7 @@ class AuthMethods {
 
     final GoogleSignInAuthentication googleSignInAuthentication =
         await googleSignInAccount.authentication;
-     //
+
     final AuthCredential credential = GoogleAuthProvider.credential(
         idToken: googleSignInAuthentication.idToken,
         accessToken: googleSignInAuthentication.accessToken);
@@ -38,13 +38,13 @@ class AuthMethods {
       SharedPreferenceHelper().saveUserEmail(userDetails.email);
       SharedPreferenceHelper().saveUserId(userDetails.uid);
       SharedPreferenceHelper()
-          .saveUserName(userDetails.email.replaceAll("@gmail.com",""));
+          .saveUserName(userDetails.email.replaceAll("@gmail.com", ""));
       SharedPreferenceHelper().saveDisplayName(userDetails.displayName);
       SharedPreferenceHelper().saveUserProfileUrl(userDetails.photoURL);
 
       Map<String, dynamic> userInfoMap = {
         "email": userDetails.email,
-        "username": userDetails.email.replaceAll("@gmail.com",  ""),
+        "username": userDetails.email.replaceAll("@gmail.com", ""),
         "name": userDetails.displayName,
         "imgUrl": userDetails.photoURL
       };
@@ -64,15 +64,15 @@ class AuthMethods {
     await auth.signOut();
     //await signInWithGoogle(signOut());
     //Navigator.pushReplacement(                     changes to be made here for popup block auth
-        //(context), MaterialPageRoute(builder: (context) => signInWithGoogle(context)));
+    //(context), MaterialPageRoute(builder: (context) => signInWithGoogle(context)));
   }
 
   //Future signOut() async {
-    //try {
-      //await auth.signOut();
-      //await signInWithGoogle.signOut();
-    //} catch (e) {
-      //print('Failed to signOut' + e.toString());
-    //}
+  //try {
+  //await auth.signOut();
+  //await signInWithGoogle.signOut();
+  //} catch (e) {
+  //print('Failed to signOut' + e.toString());
+  //}
   //}
 }
